@@ -466,4 +466,8 @@ class AppsflyerSdk {
   void setOneLinkCustomDomain(List<String> brandDomains) {
     _methodChannel.invokeMethod("setOneLinkCustomDomain", brandDomains);
   }
+
+  void setPreinstallAttribution(String preinstallAttribution) {
+    _methodChannel.invokeMethod("setPreinstallAttribution", preinstallAttribution);
+  }
 }

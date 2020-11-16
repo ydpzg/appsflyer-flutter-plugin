@@ -139,6 +139,12 @@ void main() {
       expect(selectedMethod, 'setOneLinkCustomDomain');
     });
 
+    test('check setPreinstallAttribution call', () async {
+      instance.setPreinstallAttribution("vivo_int");
+
+      expect(selectedMethod, 'setPreinstallAttribution');
+    });
+
     test('check logCrossPromotionAndOpenStore call', () async {
       instance.logCrossPromotionAndOpenStore("appId", "campaign", null);
 

@@ -195,10 +195,19 @@ public class AppsflyerSdkPlugin implements MethodCallHandler, FlutterPlugin, Act
             case "setOneLinkCustomDomain":
                 setOneLinkCustomDomain(call, result);
                 break;
+            case "setPreinstallAttribution":
+                setPreinstallAttribution(call, result);
+                break;
             default:
                 result.notImplemented();
                 break;
         }
+    }
+
+    private void setPreinstallAttribution(MethodCall call, Result result) {
+        String preInstallAttribution = (String)call.argument("preInstallAttribution");
+        AppsFlyerLib.getInstance().setPreinstallAttribution(preInstallAttribution, preInstallAttribution, preInstallAttribution);
+        result.success(null);
     }
 
     private void setOneLinkCustomDomain(MethodCall call, Result result) {
